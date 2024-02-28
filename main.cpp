@@ -29,31 +29,3 @@ int main() {
         delay(TIME_INCREMENT_MS);
     }
 }
-// This is what they should end up with
-/*int main() {
-    uartUsb.write( midiMessage, 1 );
-    digitalPot.frequency(400000); //400KHz
-    bool upState = true;
-    char data[] = {0x02, 0x80};  //Use 0x02 control register to set 0x80 mode
-                                 //Mode 1 means writes go to Wiper register only
-    digitalPot.write(addr8bit, data, 2);
-    data[0] = 0x00;  //wiper register
-    data[1] = 0x00;  //wiper value of 00, VRW=0
-    digitalPot.write(addr8bit, data, 2);
-    while (true) {
-        if ((data[1] < 127) && (upState == true) ) {
-            data[1]++;
-            digitalPot.write(addr8bit, data, 2);
-        } else { 
-            upState = false;
-        }
-        if ((data[1] > 0) && (upState == false) ) {
-            data[1]--;
-            digitalPot.write(addr8bit, data, 2);
-        } else { 
-            upState = true;
-        }
-        delay(TIME_INCREMENT_MS);
-    }
-}
-*/
