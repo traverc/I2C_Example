@@ -23,7 +23,7 @@ int main() {
     digitalPot.write(addr8bit, data, 2);  
     delay(10000); //hold it here for 10 seconds so we can measure it
     while (true) {
-    //now we will change the wiper value to 128/2 to get VRW of 3.3/2V  (about 1.65V)
+    //now we will change the wiper value to 128/2 to get VRW of 5/2V  (about 1.65V)
         data[1] = 64;
         digitalPot.write(addr8bit, data, 2); //write the 64 value to WR
         delay(TIME_INCREMENT_MS);
